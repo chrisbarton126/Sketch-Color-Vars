@@ -55,7 +55,7 @@ var onRun = function(context) {
       var green = Math.round(color_array[1] * 100) + '%';
       var blue = Math.round(color_array[2] * 100) + '%';
       var alpha = parseFloat(color_array[3]).toFixed(2);
-      var rgbaValues = red + "," + green + "," + blue + "," + alpha;
+      var rgbaValues = color_array.join(',') //red + "," + green + "," + blue + "," + alpha;
 
       str_scss += "$" + layer_name + ": rgba(";
       str_scss += rgbaValues;
